@@ -1,10 +1,40 @@
-# News_Type_Classification
-This is a News Type Classification Project which uses Random Forest to predict the type of news using the News Headline and a Small Description of the News (optional). The Jupyter Notebook file which was used to train the model has been uploaded. The dataset used to train the model was taken from Kaggle, [this](https://www.kaggle.com/datasets/rmisra/news-category-dataset) is the link to it. However, some changes were made to the dataset before the model training so the [this](https://drive.google.com/file/d/1cdygtFDLhNy3N60_7KlrgwyKZlh3Bt2Y/view?usp=sharing) is the link to the exact dataset which I used.<br>
-<br>This project uses sklearn.feature_extraction.text.TfidfVectorizer on the entire dataset to gather the various words used in the dataset and their importance in the dataset. This helps us classify the news based on the words used in the headline and the description. I saved the Vectorizer file as well so that we need not pass the entire dataset through the TfidfVectorizer each time the code would run. The Python file to do that and the Vectorizer file have been uploaded in the repository.<br>
-The model training in this particular case takes a lot of time because of multiple reasons some of which are:<br>
-1. The Dataset is quite big and contains about 210K rows of data.
-2. We are not limiting the TfidfVectorizer to a certain amount of words from the dataset, we are allowing it to identify and take as many words it wants from the dataset which in this case is 84829.
-3. The number of decision trees used in the random forest model are 300 and the time taken to train the model increases as we increase the number of decision trees in the model.<br>
+# News Type Classification
 
-<br>[This](https://drive.google.com/file/d/1S-ZvYUHOhDHddfgD_7xgEkQEqI1txr9S/view?usp=sharing) is the link to the model which I trained. If you train a model of your own, you might not get a very good accuracy but do understand this that a news can come under various categories at the same time and if your model predicts any one of those, it would be correct. While testing the model, use your custom inputs to check whether your model is predicting the news type related to the news or not<br>
-<br>I have also created a TkInter window for the ease of the user to use this project. The python file for the TkInter window has also been uploaded. Even though the window which has been made is quite basic but it does the work.
+This is a News Type Classification project that uses Random Forest to predict the type of news based on the News Headline and a Small Description of the News (optional). The project includes a Jupyter Notebook file used to train the model and a dataset obtained from Kaggle, with some modifications made to it for better results.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+
+## Introduction
+
+This project is designed to classify news articles into different categories using machine learning. It employs a Random Forest model and a custom-designed TkInter interface for ease of use.
+
+## Getting Started
+
+To get started with this project:
+
+1. Download the model and dataset files:
+
+   - [Pre-trained Model (model.zip)](https://drive.google.com/file/d/1S-ZvYUHOhDHddfgD_7xgEkQEqI1txr9S/view?usp=sharing)
+   - [Modified Dataset (News_Category_Dataset_v3.zip)](https://drive.google.com/file/d/1cdygtFDLhNy3N60_7KlrgwyKZlh3Bt2Y/view?usp=sharing)
+
+2. Extract the contents of the downloaded zip files into the project directory.
+
+3. Run the TkInter interface:
+
+```shell
+window.py
+```
+
+Follow the on-screen instructions to input news headlines and descriptions for classification.
+
+## Usage
+
+To use the project programmatically, you can refer to the Jupyter Notebook for model training and experimentation.
+
+Feel free to contribute or share your ideas for enhancing this project!
+
+---
